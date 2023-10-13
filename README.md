@@ -1,1 +1,1 @@
-## hive3 AWS Metastore
+## Hive3 AWS Metastore
