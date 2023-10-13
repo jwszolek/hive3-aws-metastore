@@ -19,7 +19,7 @@ if [ "$CURRENT_TRY" -gt "$MAX_TRIES" ]; then
   echo "WARNING: Timeout when waiting for mariadb."
 fi
 
-sleep 25
+sleep 30
 
 # Check if schema exists
 /opt/apache-hive-3.1.3-bin/bin/schematool -dbType mysql -info
@@ -31,6 +31,4 @@ fi
 
 # /opt/apache-hive-metastore-3.0.0-bin/bin/start-metastore
 echo "Starting Hive Metastore..."
-/opt/apache-hive-3.1.3-bin/bin/hive --hiveconf hive.root.logger=DEBUG,console --service metastore &
-echo "Starting Hive server2..."
-/opt/apache-hive-3.1.3-bin/bin/hive --hiveconf hive.root.logger=DEBUG,console --service hiveserver2 &
+/opt/apache-hive-3.1.3-bin/bin/hive --hiveconf hive.root.logger=DEBUG,console --service metastore
