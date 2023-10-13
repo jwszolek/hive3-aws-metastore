@@ -24,9 +24,14 @@ Follow the steps below to build and run this setup.
 ```
 
 2. Build the metaservice container.
+
 ``` docker build -f Dockerfile.metas -t hive-meta:latest . ```
 
+
 3. Build the metaservice container.
+
 ``` docker build -f Dockerfile.hs2 -t hive-hs2:latest . ```
 
+4. Run docker-compose
 
+``` docker-compose up ```
